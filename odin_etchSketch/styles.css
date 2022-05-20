@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Lacquer', cursive; */
+}
+
+.flex-container{
+    position: absolute;
+    width:100%;
+    min-height: 100vh;
+    padding: 100px;
+    display:flex;
+    border: 5px solid black;
+    /* justify-content:flex-start;
+    align-items: center;
+    background: black;
+    color: white;
+    z-index: 2;
+    right: 0; */
+}
+
+.box{
+    border: 2px solid red;
+    box-sizing: border-box;
+    display: inline-blcok;
+    width: 25px;
+    height: 25px;
+}
