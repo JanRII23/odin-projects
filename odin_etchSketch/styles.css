@@ -1,35 +1,11 @@
-
-* {
+/* body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
-.flex-container{
-    position:absolute;
-    width: 100%;
-    min-height: 100vh;
-    display:flex;
-    border: 5px solid red;
-    justify-content: center;
-    align-items: center;
-}
-
-.box{
-    border: 1px solid lightgrey;
-    box-sizing: border-box;
-    display:flex;
-    width: 25px;
-    height: 25px;
-   
-}
-
-.box:hover{
-    background-color: black;
-}
-
-
-.box.active{
-    
-    background-color: black;
+.board{
+    width: 500px;
+    height: 500px;
+    display: grid;
 }

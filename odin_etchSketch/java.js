@@ -1,35 +1,23 @@
-const board_div = document.querySelector(".flex-container");
+//reveiw the whole script!!
+function createGrid(size){
+    let board = document.querySelector(".board");
+    let squares = board.querySelectorAll("div");
+    squares.forEach((div) => div.remove());
 
-function makeGrid(){
-    for (let i = 0; i < 20; i++){
-      let row = board_div.appendChild(document.createElement('div'));
+    board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    board.style.gridTemplateRows = `repeat(${size}, 1fr)`;
 
-        for (let j = 0; j < 20; j++){
-            let col = document.createElement('div');
-            col.className = 'box';
-            row.appendChild(col);
-        }
-     
+    let val = size * size;
+    for (let i = 0; i < val; i++){
+        let box = document.createElement('div');
+        box.style.backgroundColor = 'red';
+        board.appendChild(box);
     }
-    const boxes_div = document.querySelectorAll(".box");
-
 }
 
-function changeColor(){
-    boxes_div.classList.toggle('active')
-
+function sizeIndicator(userInput){
+    createGrid(userInput);
 }
 
-boxes_div.addEventListener('click', () =>{
-    changeColor();
-})
-
-
-function main(){
-    makeGrid();
-   
-}
-
-main();
-
+sizeIndicator(16); //by having this as a constant it is the default box before getting resized
 

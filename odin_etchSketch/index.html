@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Etch-A-Sketch</title>
-
+    <link rel ="resetSheet" href="./reset.css">
     <link rel = "stylesheet" href="./styles.css">
     <script src = "./java.js" defer></script>
 
@@ -19,7 +19,26 @@
 <body>
 
     <div class="flex-container">
- 
+        <div class="title">SketchPad</div>
+        <div class="content">
+            <div class="board"></div>
+            <div class="button">
+                <button class="black"></button>
+                <button class="white"></button>
+                <button class="random"></button>
+                <button class="reset"></button>
+            </div>
+            <div>
+                <input type = "text"
+                placeHolder = "Size of Board"
+                value = "16"
+                onchange = "sizeIndicator(this.value)"
+                />
+            
+                <button>Set Size</button>
+
+            </div>
+        </div>
     </div>
 
     
@@ -27,6 +46,4 @@
 
 </html>
 
-<!-- - having trouble understanding why my background of a box is not changing after hovering and clicking
-- solution to having more boxes but keeping the same box size is simply making the j value have a user inputted value instead of the hard-coded 20
--  -->
+<!-- input type is new to me, reset.css is new, i need to experiment more with reset.css, manipulating the divs with java and then removing it-->
