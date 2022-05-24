@@ -1,16 +1,48 @@
+
+
+
 /* body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 } */
 
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.content{
+    padding: 10px;
+}
+
 .board{
     width: 500px;
     height: 500px;
     display: grid;
-    border: 2px solid black;
+    border: 5px solid black;
 }
 
-.box .active{
+.box.active{
     filter: invert(1);
+}
+
+.button{
+    padding: 10px;
+    
+}
+
+.black, .invert, .erase,
+.fullRandom, .random, 
+.reset, .textBox,
+.sizer {
+    border: 2px solid black;
 }
