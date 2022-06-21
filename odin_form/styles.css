@@ -9,7 +9,7 @@
 }
 
 .flex-container{
-    position: absolute;
+    /* position: absolute; */
     right: 0;
     width:100%;
     height: 100vh;
@@ -18,14 +18,17 @@
     justify-content:center;
     align-items: center;
     background: black;
+    position: relative;
 }
 
 .main{
     background: white;
     width: 80%;
     height: 100vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
+    /* position: relative; */
+    position: absolute;
 }
 
 #rock{
@@ -34,18 +37,73 @@
 }
 
 .form{
+    position: relative;
     flex-direction: column;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
     padding: 50px;
+    /* border: 2px solid red; */
 }
+
+
 
 .cols{
     flex-direction: row;
     display: flex;
-    border: 2px solid red;
-    width: 600px;
+    /* border: 2px solid red; */
+    width: 80%;
     justify-content: flex-start;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    background-color: white;
+}
+
+.cols div{
+    padding-bottom: 7px;
+}
+
+.row1 {
+    padding-right: 60px;
+}
+
+#first_name,
+#last_name,
+#password, 
+#email,
+#number{
+    width: 220px;
+}
+
+button{
+    background-color: #596D48;
+    color: white;
+    padding: 10px;
+    width: 25%;
+    border-radius: 5px;;
+}
+
+.moreText{
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid red; */
+    width: 40%;
+    justify-content: space-around;
+    
+}
+
+/* .One,
+.Two,
+.Three{
+    width: 100%;
+    height: 80%;
+}
+
+.One,
+.Three{
+    background-color: lightgrey;
+} */
+
+#logIn{
+    color:#596D48;
+    border-radius: 25px;;
 }
