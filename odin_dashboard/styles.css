@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Smooch', cursive;
+}
+
+.flex-container{
+    /* border: 2px solid red; */
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+}
+
+.sidebar{
+    /* border: 2px solid blue; */
+    width: 15%;
+    display: grid;
+    grid-template-rows: 10% 30% 60%;
+    position: relative;
+    background-color: #FAEBEFFF;
+    color: #333D79FF;
+}
+
+.mainPage{
+    border: 2px solid green;
+    width: 85%;
+    position:relative;
+}
+
+.logo{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selectPage{
+    /* border: 2px solid salmon; */
+    display: grid;
+    padding-left: 15%;
+    grid-template-columns: 10% 90%;
+}
+
+.settings{
+    /* border: 2px solid orange; */
+    display: grid;
+    grid-template-rows: repeat(3, 8%);
+    padding-left: 23%;
+    padding-top: 50%;
+    row-gap: 5%;
+}
