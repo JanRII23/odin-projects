@@ -8,7 +8,7 @@
 }
 
 .flex-container{
-    /* border: 2px solid red; */
+
     display: flex;
     width: 100%;
     min-height: 100vh;
@@ -16,40 +16,105 @@
 }
 
 .sidebar{
-    /* border: 2px solid blue; */
+
     width: 15%;
     display: grid;
     grid-template-rows: 10% 30% 60%;
     position: relative;
-    background-color: #FAEBEFFF;
-    color: #333D79FF;
-}
-
-.mainPage{
-    border: 2px solid green;
-    width: 85%;
-    position:relative;
+    background-color: #333D79FF;
+    color: #FAEBEFFF;
 }
 
 .logo{
-    /* border: 2px solid black; */
+  
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .selectPage{
-    /* border: 2px solid salmon; */
+
     display: grid;
     padding-left: 15%;
     grid-template-columns: 10% 90%;
 }
 
 .settings{
-    /* border: 2px solid orange; */
     display: grid;
     grid-template-rows: repeat(3, 8%);
     padding-left: 23%;
     padding-top: 50%;
     row-gap: 5%;
+}
+
+.mainPage{
+    width: 85%;
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.navBar{
+    height: 20%;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    background-color: #333D79FF;;
+}
+
+.searchBar{
+    padding-left:50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchBar .box{
+    width: 70%;
+    height: 40%;
+    background-color: white;
+    border-radius: 12px;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 60px;
+    font-size: 20px;
+    gap: 20px;
+}
+
+.greeting{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 50px;
+}
+
+.greeting div{
+    font-size: 20px;
+    word-spacing: 10px;
+}
+
+
+.actions{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.actions div{
+    background-color: white;
+    width: 20%;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    border-radius: 12px;
+    color: black;
+}
+
+.info{
+    border: 2px solid red;
+    height: 80%;
+    background-color: #6699CC;
 }
