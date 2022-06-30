@@ -13,6 +13,9 @@
     width: 100%;
     min-height: 100vh;
     position: absolute;
+    background-color: #333D79FF;
+    padding-bottom: 10px;
+    padding-right: 10px;
 }
 
 .sidebar{
@@ -59,7 +62,7 @@
     height: 20%;
     display: grid;
     grid-template-columns: 65% 35%;
-    background-color: #333D79FF;;
+    background-color: #333D79FF;
 }
 
 .searchBar{
@@ -114,7 +117,117 @@
 }
 
 .info{
-    border: 2px solid red;
     height: 80%;
     background-color: #6699CC;
+    display: flex;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: white;
+    gap: 8px;
+    
 }
+
+.info .projects{
+    width: 70%;
+    background-color: #333D79FF;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.projects h1{
+    text-decoration: underline;
+}
+
+.info .projectBoxes{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 90%;
+    justify-items: start;
+    align-items: center;
+}
+
+.box{
+    border: 2px solid black;
+    width: 97%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 8px;
+}
+
+.boxColor{
+    background-color: black;
+    width: 2%;
+}
+
+.boxContent{
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.info .announcementsTrending{
+    width: 30%;
+    /* background-color: #333D79FF; */
+    border-radius: 10px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    gap: 5px;
+    border: 8px solid #333D79FF;
+}
+
+.announcementsTrending h1{
+    letter-spacing: 4px;
+    color: white;
+    background-color: #333D79FF;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.moreOne, 
+.moreTwo{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #333D79FF;
+    border-radius: 8px;
+    
+}
+
+.moreOne
+{
+    height: 55%;
+    justify-content: space-evenly;
+}
+
+.moreOne div{
+    text-align: center;
+}
+
+.moreTwo{
+    height: 45%;
+}
+
+.accounts{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.accountLogo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.handle{
+    color:white;
+}
+
+
