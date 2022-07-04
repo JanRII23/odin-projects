@@ -17,6 +17,27 @@
         
         <div class="flex-container">
             <div class="popUp">
+                <!-- <span class="close">x</span> -->
+                
+                <form action="http://localhost/" method="get">
+                    <h3>New Book</h3>
+                    <label for="title">Title </label><br>
+                    <input type="text" id="title" placeholder ="&quot;Frankenstein&quot;" name="title"><br>
+
+                    <label for="author">Author</label><br>
+                    <input type="text" id="author" placeholder = "Mary Shelley" name="author"><br>
+
+                    <label for="pages">Pages</label><br>
+                    <input type="number" id="pages" placeholder = 166 name="pages" min="0"><br><br>
+
+                    <label for="pages">Read: </label>
+                    <input type="checkbox" id="readCheck" name="readCheck"><br><br>
+
+                    <button type = "submit" class = "btn">Add Book</button> 
+                    <button type = "button" class = "btn cancel" onclick = "closeBook()">Close</button> 
+                </form>
+                
+
             
             </div>
             <div class="title">
