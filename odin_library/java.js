@@ -6,6 +6,13 @@
 const button_div = document.querySelector(".addButton");
 const popUp_div = document.querySelector(".popUp");
 
+const testBook = {
+    title: "Frankenstein",
+    author: "Mary Shelley",
+    pages: 166,
+    read: true
+}
+
 let myLibrary = [];
 
 function Book(){
@@ -30,6 +37,7 @@ function main(){
         console.log("Hello");
 
         openBook();
+        testBook;
         // Book();
         // addBookToLibrary();
     })
