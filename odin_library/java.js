@@ -3,105 +3,88 @@
 // each book gets added as a card or in a table
 // 2 buttons on each card read/not read and remove
 
-//make notes about the library project simulator
+//just need to work on action validation when sumbitting form to reflect on html
 
 const button_div = document.querySelector(".addButton");
 const popUp_div = document.querySelector(".popUp");
 const newBook_btn = document.querySelector(".btn");
-// const closePopUp_div = document.querySelector(".btn.cancel");
-
-//Book Constructor
-class Book{
-    constructor(title, author, pages, readCheck){
-        this.title = form.title.value;
-        this.author = form.author.value;
-        this.pages = form.pages.value;
-        this.read = form.readCheck.checked;
-    }
-}
 
 let myLibrary = [];
 let newBook;
 
-// function Book(){
-
-// }
+//Book Constructor
+class Book{
+    constructor(title, author, pages, read) { //make sure the naming convention are the same in order for shorthand getting form values
+        this.title = form.title.value;
+        this.author = form.author.value;
+        this.pages = form.pages.value;
+        this.read = form.read.value;
+    }
+}
 
 function addBookToLibrary(){
-    // closePopUp_div.style.display = 'none';
-    closeBook();
-    newBook = new Book(title, author, pages, readCheck);
-    myLibrary.push(newBook); // works like a dynamic array?
-    setData();
-    render();
-    form.reset();
 
+    newBook = new Book(title, author, pages, read);
+    myLibrary.push(newBook);
+    form.reset;
 }
 
-function render(){
-    const display = document.querySelector('newBooks');
-    const books = document.querySelectorAll('.book');
-    books.forEach(book => display.removeChilde(book));
-    
+function display(){
+    const show = document.querySelector(".newBooks");
+    const books = document.querySelectorAll(".book");
+    books.forEach(book => display.removeChild(book));
+
     for (let i = 0; i < myLibrary.length; i++){
-        createBook(myLibrary[i]);
+        creatBook(myLibrary[i]);
     }
 }
 
-function createBook(item){
-    const library = document.querySelector('.newBooks');
-    const books_div = document.createElement('div');
-    const title_div = document.createElement('div');
-    const auth_div = document.createElement('div');
-    const page_div = document.createElement('div');
-    const remove_btn = document.createElement('button');
-    const read_btn = document.createElement('button');
+function creatBook(item){
+    const shelf = document.querySelector(".newBooks");
+    const bookDiv = document.createElement('div');
     
-    books_div.classList.add('book');
-    books_div.setAttribute('id', myLibrary.indexOf(item));
+    const titleDiv = document.createElement('div');
+    const authorDiv = document.createElement('div');
+    const pageDiv = document.createElement('div');
 
-    title_div.textContent = item.title;
-    title_div.classList.add('title');
-    books_div.appendChild(title_div);
+    const readBtn = document.createElement('button');
+    const removeBtn = document.createElement('button');
 
-    auth_div.textContent = item.author;
-    auth_div.classList.add('author');
-    books_div.appendChild(auth_div);
+    bookDiv.classList.add('book');;
+    bookDiv.setAttribute('id', myLibrary.indexOf(item));
 
-    page_div.textContent = item.page_div;
-    page_div.classList.add('pages');
-    books_div.appendChild(page_div);
+    titleDiv.textContent = item.title;
+    titleDiv.classList.add('title');
+    bookDiv.appendChild(titleDiv);
 
-    read_btn.classList.add('readCheck');
-    books_div.appendChild('readCheck');
-    if (item.read === false){
-        read_btn.textContent = 'Not Read';
-    }else{
-        read_btn.textContent = 'Read';
-    }
+    authorDiv.textContent = item.author;
+    authorDiv.classList.add('author');
+    bookDiv.appendChild(authDiv);
+
+    pageDiv.textContent = item.pages;
+    pageDiv.classList.add('pages');
+    bookDiv.appendChild(pageDiv);
+
+    readBtn.classList.add('readBtn');
+    bookDiv.appendChild(readBtn);
+
+    shelf.appendChild(bookDiv);
+
 }
 
-
-//setting Library to be stored in local storage
-function setData(){
-    localStorage.setItem(`myLibrary`, JSON.stringify(myLibrary));
-}
+//setting up Library to be stored locally 
 
 //pulls books from local storage when page is refreshed
-function restore(){
-    if (!localStorage.myLibrary){
-        render();
-    }else{
-        let objects = localStorage.getItem('myLibrary');
-        objects = JSON.parse(objects);
-        myLibrary = objects;
-        render();
-    }
-}
+
 
 
 function openBook(){
    popUp_div.style.display = "block";
+
+   newBook_btn.addEventListener('click', () =>{
+    addBookToLibrary();
+    })
+
     
 }
 
@@ -114,13 +97,7 @@ function main(){
         openBook();
     
     })
-
-    newBook_btn.addEventListener('click', () =>{
-        addBookToLibrary();
-        console.log("hello");
-    })
-   
-    restore();
+    // event.preventDefault();
 }
 
 main();
