@@ -19,7 +19,7 @@
             <div class="popUp">
                 <!-- <span class="close">x</span> -->
                 
-                <form action="#" id="form">
+                <form action="#" id="form" onbsubmit="return setAction(this)">
                     <h3>New Book</h3>
                     <label for="title">Title </label><br>
                     <input type="text" id="title" placeholder ="&quot;Frankenstein&quot;" name="title"><br>
@@ -31,7 +31,7 @@
                     <input type="number" id="pages" placeholder = 166 name="pages" min="0"><br><br>
 
                     <label for="read">Read: </label>
-                    <input type="checkbox" id="read" name="read"><br><br>
+                    <input type="checkbox" id="read" name="read" value="yes"><br><br>
 
                     <button type = "submit" class = "btn">Add Book</button> 
                     <button type = "button" class = "btn cancel" onclick = "closeBook()">Close</button> 

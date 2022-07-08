@@ -17,29 +17,37 @@ class Book{
     constructor(title, author, pages, read) { //make sure the naming convention are the same in order for shorthand getting form values
         this.title = form.title.value;
         this.author = form.author.value;
-        this.pages = form.pages.value;
+        this.pages = form.pages.value + ' pgs';
         this.read = form.read.value;
     }
 }
 
 function addBookToLibrary(){
 
+    function setAction(form){
+        form.action = "index.html";
+        alert(form.action);
+        return false;
+    }
+
     newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
-    form.reset;
+    // setData();
+    render();
+    form.reset();
 }
 
-function display(){
+function render(){
     const show = document.querySelector(".newBooks");
     const books = document.querySelectorAll(".book");
-    books.forEach(book => display.removeChild(book));
+    books.forEach(book => show.removeChild(book));
 
     for (let i = 0; i < myLibrary.length; i++){
-        creatBook(myLibrary[i]);
+        createBook(myLibrary[i]);
     }
 }
 
-function creatBook(item){
+function createBook(item){
     const shelf = document.querySelector(".newBooks");
     const bookDiv = document.createElement('div');
     
@@ -59,7 +67,7 @@ function creatBook(item){
 
     authorDiv.textContent = item.author;
     authorDiv.classList.add('author');
-    bookDiv.appendChild(authDiv);
+    bookDiv.appendChild(authorDiv);
 
     pageDiv.textContent = item.pages;
     pageDiv.classList.add('pages');
@@ -67,6 +75,14 @@ function creatBook(item){
 
     readBtn.classList.add('readBtn');
     bookDiv.appendChild(readBtn);
+
+    if(item.read === false){
+        readBtn.textContent = "Not Read";
+        readBtn.style.backgroundColor = "red";
+    }else{
+        readBtn.textContent = "Read";
+        readBtn.style.backgroundColor = "green";
+    }
 
     shelf.appendChild(bookDiv);
 
@@ -98,6 +114,8 @@ function main(){
     
     })
     // event.preventDefault();
+   
 }
 
 main();
+
