@@ -133,10 +133,10 @@ form input[type=text]:focus{
    
 }
 
-.newBooks div{
+/* .newBooks div{
     border: 2px solid black;
     min-width: 30%;
     min-height: 40%;
     background-color: white;
     border-radius: 12px;
-}
+} */
