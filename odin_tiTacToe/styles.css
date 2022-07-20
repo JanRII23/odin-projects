@@ -1,3 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+*{
+    font-family: 'Bungee', cursive;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+    background-color: #ff1d58;
+}
+
+.gameBoard{
+    border: 2px solid black;
+    height: 90%;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F75990;
+    border-radius: 10px;
+}
+
+.board{
+    border: 5px solid #0049B7;
+    width: 40%;
+    height: 80%;
+    background-color: #FFF685;
+    border-radius: 10px;
+}
+
 h1{
-    color: blue;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #E5EAF5;
 }
